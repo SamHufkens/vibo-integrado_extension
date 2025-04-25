@@ -1,0 +1,66 @@
+.container {
+    width: 400px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+.individual_goal {
+    width: 80%;
+    margin-right: 10px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db; 
+    border-radius: 0.375rem; 
+    background-color: #fff;
+    color: #111827; 
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+.individual_goal:focus {
+    border-color: #1e232d; 
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3); 
+}
+
+.individual_goal_label {
+    margin-top: 5px;
+    display: block;
+    font-size: 0.875rem;     
+    font-weight: 500;        
+    color: #374151;          
+    margin-bottom: 0.25rem;  
+}
+
+#submit_button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;              
+    background-color: #1b1b1b;        
+    color: white;                     
+    font-size: 0.875rem;              
+    font-weight: 500;                 
+    border-radius: 0.375rem;          
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+#submit_button:hover {
+background-color: #292929;        
+}
+
+#submit_button:focus {
+outline: none;
+box-shadow: 0 0 0 2px rgba(2, 4, 10, 0.4); /
+}
+
+#error {
+    color: red;
+    font-size: 12px;
+}

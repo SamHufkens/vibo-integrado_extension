@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "VIBO/Integrado (Opdrachtkaart)",
+    "description": "This extension is designed for teachers at VIBO Sint-Barbara to automatically fill in their 'Opdrachtkaart'",
+    "version": "3.0",
+    "icons": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": [
+      "downloads",
+      "activeTab"
+    ],
+    "background": {
+      "service_worker": "background.js"  
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://sintbarbara.integrado.be/*"], 
+        "js": ["content.js", "pdf-lib.min.js"]
+      }
+    ],
+    "host_permissions": [
+      "https://sintbarbara.integrado.be//*"  
+    ],
+    "web_accessible_resources": [
+    {
+      "resources": ["templateForm.pdf"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+  
